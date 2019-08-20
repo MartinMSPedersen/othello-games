@@ -1,4 +1,4 @@
-# AN archive of Othello games.
+#  Othello games archive (PGN)
 
 http://www.ffothello.org/informatique/la-base-wthor/ containas a large archive of Othello games.
 But the games is saved in a format called Thor which is hard to read for humans.
