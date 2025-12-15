@@ -71,91 +71,91 @@ The score, already presents in the header, can be added at the end of the move l
 
 Assuming you are testing the script from the `./code/Python/` directory in a clone of this repo:
 - I want to see the PGN translation of a single file (eg : `../../wthor/WTH_1977.wtb`):
-```bash
-python thor2pgn.py -f ../../wthor/WTH_1977.wtb
-```
-I get:
-```
-Game 001 PGN
-[Event "World Championship - 1977"]
-[Date "1977"]
-[Black "Inoue Hiroshi"]
-[White "Heiberg Thomas"]
-[Result "34-30"]
-1. F5 D6
-3. C3 F3
-5. F4 D3
-...
-55. A8 A1
-57. G1 G2
-59. H2 H1
+    ```bash
+    python thor2pgn.py -f ../../wthor/WTH_1977.wtb
+    ```
+    I get:
+    ```
+    Game 001 PGN
+    [Event "World Championship - 1977"]
+    [Date "1977"]
+    [Black "Inoue Hiroshi"]
+    [White "Heiberg Thomas"]
+    [Result "34-30"]
+    1. F5 D6
+    3. C3 F3
+    5. F4 D3
+    ...
+    55. A8 A1
+    57. G1 G2
+    59. H2 H1
 
-----------------------------------------
-...
-```
+    ----------------------------------------
+    ...
+    ```
 
 - I want to translate a file in the same directory (I get the file `../../wthor/WTH_1977.pgn`):
-```bash
-python thor2pgn.py -f ../../wthor/WTH_1977.wtb --save-pgn
-```
+    ```bash
+    python thor2pgn.py -f ../../wthor/WTH_1977.wtb --save-pgn
+    ```
 
-- I want to set the move index instead of the line index as number in each move line:
-```bash
-python thor2pgn.py -f ../../wthor/WTH_1977.wtb --line-index
-```
-I get:
-```
-Game 001 PGN
-[Event "World Championship - 1977"]
-[Date "1977"]
-[Black "Inoue Hiroshi"]
-[White "Heiberg Thomas"]
-[Result "34-30"]
-1. F5 D6
-2. C3 F3
-3. F4 D3
-...
-28. A8 A1
-29. G1 G2
-30. H2 H1
+    - I want to set the move index instead of the line index as number in each move line:
+    ```bash
+    python thor2pgn.py -f ../../wthor/WTH_1977.wtb --line-index
+    ```
+    I get:
+    ```
+    Game 001 PGN
+    [Event "World Championship - 1977"]
+    [Date "1977"]
+    [Black "Inoue Hiroshi"]
+    [White "Heiberg Thomas"]
+    [Result "34-30"]
+    1. F5 D6
+    2. C3 F3
+    3. F4 D3
+    ...
+    28. A8 A1
+    29. G1 G2
+    30. H2 H1
 
-----------------------------------------
-...
-```
+    ----------------------------------------
+    ...
+    ```
 
 - I want to add the score at the end of the move list:
-```bash
-python thor2pgn.py -f ../../wthor/WTH_1977.wtb --add-result
-```
-I get:
-```
-Game 001 PGN
-[Event "World Championship - 1977"]
-[Date "1977"]
-[Black "Inoue Hiroshi"]
-[White "Heiberg Thomas"]
-[Result "34-30"]
-1. F5 D6
-3. C3 F3
-5. F4 D3
-...
-55. A8 A1
-57. G1 G2
-59. H2 H1
-34-30
-----------------------------------------
-...
-```
+    ```bash
+    python thor2pgn.py -f ../../wthor/WTH_1977.wtb --add-result
+    ```
+    I get:
+    ```
+    Game 001 PGN
+    [Event "World Championship - 1977"]
+    [Date "1977"]
+    [Black "Inoue Hiroshi"]
+    [White "Heiberg Thomas"]
+    [Result "34-30"]
+    1. F5 D6
+    3. C3 F3
+    5. F4 D3
+    ...
+    55. A8 A1
+    57. G1 G2
+    59. H2 H1
+    34-30
+    ----------------------------------------
+    ...
+    ```
 
 - I want to translate all files in the directory and save them in a specific directory (**note**: **don't forget the last slash** in `../../wthor/` and `../../pgn_games/`):
-```bash
-python thor2pgn.py -f ../../wthor/ --save-pgn ../../pgn_games/
-```
+    ```bash
+    python thor2pgn.py -f ../../wthor/ --save-pgn ../../pgn_games/
+    ```
 
 - I want to translate all files in a directory and gather all PGN outputs in one file (eg: `../../pgn_games/all_games.pgn`):
-```bash
-python thor2pgn.py -f ../../wthor/ --save-pgn ../../pgn_games/all_games.pgn
-```
+    ```bash
+    python thor2pgn.py -f ../../wthor/ --save-pgn ../../pgn_games/all_games.pgn
+    ```
 
 ## Initial repository
 From initial repo [MartinMSPedersen/othello-games]( https://github.com/MartinMSPedersen/othello-games)
